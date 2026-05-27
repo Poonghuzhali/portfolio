@@ -80,7 +80,6 @@ export default function Projects() {
                   onError={e => { e.target.style.display = 'none' }}
                   loading="lazy"
                 />
-                <span className="project-thumb-icon">{p.title[0]}</span>
                 <span className="project-view">View Live →</span>
               </div>
               <div className="project-body">
