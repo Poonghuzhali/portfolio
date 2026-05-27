@@ -34,7 +34,7 @@ export default function Home() {
           </div>
         </div>
         <div className="hero-image-wrapper">
-          <img src="/portfolio/images/myphoto.png" alt="Poonghuzhali" className="hero-image" />
+          <img src="/portfolio/images/Myphoto.png" alt="Poonghuzhali" className="hero-image" />
         </div>
       </div>
     </section>
