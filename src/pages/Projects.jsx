@@ -16,13 +16,6 @@ const projects = [
     color: '#00b894',
   },
   {
-    title: 'Day 30 React',
-    desc: 'A 30-day React practice project exploring components, hooks, and state management.',
-    tags: ['React', 'JavaScript', 'Vite'],
-    link: 'https://poonghuzhali.github.io/day30react/',
-    color: '#0984e3',
-  },
-  {
     title: 'Inventory Management',
     desc: 'Inventory tracking system for managing stock, orders, and product data.',
     tags: ['JavaScript', 'CRUD', 'Dashboard'],
