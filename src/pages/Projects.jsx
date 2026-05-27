@@ -4,7 +4,7 @@ const projects = [
   {
     title: 'Billing App',
     desc: 'A billing application built with JavaScript for retail billing and invoice management.',
-    tags: ['JavaScript', 'Billing', 'UI'],
+    tags: ['JavaScript', 'React', 'UI'],
     link: 'https://poonghuzhali.github.io/Billing-App/',
     color: '#6c5ce7',
   },
