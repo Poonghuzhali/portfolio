@@ -2,8 +2,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255,255,255,0.85);
-  backdrop-filter: blur(12px);
+  background: rgba(255,255,255,0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -15,10 +16,26 @@
 }
 
 .logo {
-  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.2rem;
   font-weight: 700;
-  color: var(--accent);
+  color: var(--primary);
   letter-spacing: -0.5px;
+}
+
+.logo-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, var(--accent), #5a4bd1);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 800;
 }
 
 .nav {
@@ -28,7 +45,7 @@
 
 .nav-link {
   padding: 8px 16px;
-  border-radius: 8px;
+  border-radius: var(--radius-sm);
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--secondary);
@@ -36,8 +53,8 @@
 }
 
 .nav-link:hover {
-  background: var(--bg);
-  color: var(--primary);
+  background: rgba(108,92,231,0.08);
+  color: var(--accent);
 }
 
 .nav-link.active {
@@ -47,27 +64,47 @@
 
 .hamburger {
   display: none;
-  flex-direction: column;
-  gap: 5px;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 4px;
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
 }
 
-.hamburger span {
+.hambar,
+.hambar::before,
+.hambar::after {
   display: block;
-  width: 24px;
+  width: 22px;
   height: 2px;
   background: var(--primary);
   border-radius: 2px;
   transition: var(--transition);
 }
 
+.hambar {
+  position: relative;
+}
+
+.hambar::before,
+.hambar::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+
+.hambar::before { top: -7px; }
+.hambar::after  { top: 7px; }
+
+.hambar.open { background: transparent; }
+.hambar.open::before { top: 0; transform: rotate(45deg); }
+.hambar.open::after  { top: 0; transform: rotate(-45deg); }
+
 @media (max-width: 768px) {
-  .hamburger {
-    display: flex;
-  }
+  .hamburger { display: flex; }
 
   .nav {
     position: fixed;
@@ -75,7 +112,8 @@
     left: 0;
     right: 0;
     flex-direction: column;
-    background: var(--surface);
+    background: rgba(255,255,255,0.95);
+    backdrop-filter: blur(16px);
     border-bottom: 1px solid var(--border);
     padding: 16px;
     gap: 8px;

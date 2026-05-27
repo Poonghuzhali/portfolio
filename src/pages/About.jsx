@@ -1,15 +1,19 @@
+import useOnScreen from '../hooks/useOnScreen'
 import './About.css'
 
 export default function About() {
+  const [ref, visible] = useOnScreen()
+
   return (
     <section>
       <div className="container">
         <h2 className="section-title">About Me</h2>
         <p className="section-subtitle">A bit about who I am and what I do</p>
 
-        <div className="about-grid">
-          <div className="about-card">
+        <div className="about-grid" ref={ref}>
+          <div className={`about-card card ${visible ? 'visible' : ''}`}>
             <div className="about-avatar-wrapper">
+              <div className="about-avatar-ring" />
               <img src="/portfolio/images/Myphoto.png" alt="Poonghuzhali" className="about-photo" />
             </div>
             <h3>Poonghuzhali Ponniyinselvan</h3>
@@ -21,7 +25,7 @@ export default function About() {
           </div>
 
           <div className="about-details">
-            <div className="detail-item">
+            <div className={`detail-item reveal ${visible ? 'visible' : ''}`} style={{ transitionDelay: '0.1s' }}>
               <h4>Background</h4>
               <p>
                 5 months Internship at Vetri IT Solutions as a Junior Python Developer,
@@ -29,7 +33,7 @@ export default function About() {
                 analytics at HCL and Flipkart, bringing a strong analytical mindset to development.
               </p>
             </div>
-            <div className="detail-item">
+            <div className={`detail-item reveal ${visible ? 'visible' : ''}`} style={{ transitionDelay: '0.25s' }}>
               <h4>What I Do</h4>
               <p>
                 I build full-stack web applications using Python, Django, and React.
@@ -37,7 +41,7 @@ export default function About() {
                 I enjoy the entire development lifecycle.
               </p>
             </div>
-            <div className="detail-item">
+            <div className={`detail-item reveal ${visible ? 'visible' : ''}`} style={{ transitionDelay: '0.4s' }}>
               <h4>Outside Code</h4>
               <p>
                 When I'm not coding, I explore new AI tools, work on personal projects,

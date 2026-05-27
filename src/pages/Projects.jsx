@@ -1,3 +1,4 @@
+import useOnScreen from '../hooks/useOnScreen'
 import './Projects.css'
 
 const projects = [
@@ -53,16 +54,27 @@ const projects = [
 ]
 
 export default function Projects() {
+  const [ref, visible] = useOnScreen()
+
   return (
     <section>
       <div className="container">
         <h2 className="section-title">Projects</h2>
         <p className="section-subtitle">Things I've built — click to view live</p>
 
-        <div className="projects-grid">
-          {projects.map(p => (
-            <a key={p.title} href={p.link} target="_blank" rel="noopener noreferrer" className="project-card" style={{ '--accent-color': p.color }}>
-              <div className="project-top" style={{ background: p.color }} />
+        <div className="projects-grid" ref={ref}>
+          {projects.map((p, i) => (
+            <a
+              key={p.title}
+              href={p.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`project-card reveal ${visible ? 'visible' : ''}`}
+              style={{ transitionDelay: `${i * 0.08}s`, '--accent-color': p.color }}
+            >
+              <div className="project-thumb" style={{ background: `linear-gradient(135deg, ${p.color}, ${p.color}88)` }}>
+                <span className="project-thumb-icon">{p.title[0]}</span>
+              </div>
               <div className="project-body">
                 <h3 className="project-title">{p.title}</h3>
                 <p className="project-desc">{p.desc}</p>

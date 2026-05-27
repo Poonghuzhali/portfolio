@@ -1,3 +1,4 @@
+import useOnScreen from '../hooks/useOnScreen'
 import './Experience.css'
 
 const experience = [
@@ -26,17 +27,23 @@ const education = [
 ]
 
 export default function Experience() {
+  const [ref, visible] = useOnScreen()
+
   return (
     <section>
       <div className="container">
         <h2 className="section-title">Experience</h2>
         <p className="section-subtitle">My professional journey</p>
 
-        <div className="exp-timeline">
+        <div className="exp-timeline" ref={ref}>
           {experience.map((item, i) => (
-            <div key={i} className="exp-card">
+            <div
+              key={i}
+              className={`exp-card reveal ${visible ? 'visible' : ''}`}
+              style={{ transitionDelay: `${i * 0.15}s` }}
+            >
               <div className="exp-dot" />
-              <div className="exp-content">
+              <div className="exp-content card">
                 <span className="exp-period">{item.period}</span>
                 <h3 className="exp-role">{item.role}</h3>
                 <span className="exp-company">{item.company}</span>
@@ -46,10 +53,11 @@ export default function Experience() {
           ))}
         </div>
 
-        <h3 className="section-title" style={{ marginTop: 64, fontSize: '1.5rem' }}>Education</h3>
+        <h3 className="section-title" style={{ marginTop: 56, fontSize: '1.5rem' }}>Education</h3>
         <div className="edu-grid">
           {education.map((item, i) => (
-            <div key={i} className="edu-card">
+            <div key={i} className="edu-card card">
+              <div className="edu-icon">BE</div>
               <h4>{item.degree}</h4>
               <p>{item.school} — {item.year}</p>
             </div>

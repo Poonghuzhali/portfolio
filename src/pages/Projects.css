@@ -6,40 +6,61 @@
 
 .project-card {
   background: var(--surface);
+  backdrop-filter: blur(12px);
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: var(--shadow);
   border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
   transition: transform var(--transition), box-shadow var(--transition);
   display: block;
   cursor: pointer;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 28px rgba(0,0,0,0.1);
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: rgba(108,92,231,0.15);
 }
 
-.project-top {
-  height: 8px;
+.project-thumb {
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-thumb::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.15));
+}
+
+.project-thumb-icon {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: rgba(255,255,255,0.5);
+  z-index: 1;
 }
 
 .project-body {
-  padding: 24px;
+  padding: 20px 24px 24px;
 }
 
 .project-title {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-bottom: 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
   color: var(--primary);
 }
 
 .project-desc {
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   color: var(--secondary);
-  line-height: 1.7;
-  margin-bottom: 16px;
+  line-height: 1.6;
+  margin-bottom: 14px;
 }
 
 .project-tags {
@@ -50,10 +71,16 @@
 
 .project-tag {
   padding: 4px 10px;
-  border-radius: 4px;
+  border-radius: 6px;
   background: var(--bg);
   color: var(--secondary);
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 500;
   border: 1px solid var(--border);
+  transition: background var(--transition), color var(--transition);
+}
+
+.project-card:hover .project-tag {
+  background: rgba(108,92,231,0.06);
+  color: var(--accent);
 }

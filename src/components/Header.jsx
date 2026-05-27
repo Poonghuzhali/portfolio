@@ -18,9 +18,12 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container header-inner">
-        <Link to="/" className="logo">Portfolio</Link>
+        <Link to="/" className="logo">
+          <span className="logo-icon">P</span>
+          Portfolio
+        </Link>
         <button className="hamburger" onClick={() => setOpen(!open)} aria-label="Menu">
-          <span /><span /><span />
+          <span className={`hambar ${open ? 'open' : ''}`} />
         </button>
         <nav className={`nav ${open ? 'nav--open' : ''}`}>
           {links.map(l => (
