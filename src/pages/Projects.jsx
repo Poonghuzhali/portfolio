@@ -70,10 +70,16 @@ export default function Projects() {
               target="_blank"
               rel="noopener noreferrer"
               className={`project-card reveal ${visible ? 'visible' : ''}`}
-              style={{ transitionDelay: `${i * 0.08}s`, '--accent-color': p.color }}
+              style={{ transitionDelay: `${i * 0.08}s` }}
             >
               <div className="project-thumb" style={{ background: `linear-gradient(135deg, ${p.color}, ${p.color}dd)` }}>
-                <div className="project-pattern" />
+                <img
+                  src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(p.link)}?w=600`}
+                  alt={p.title}
+                  className="project-thumb-img"
+                  onError={e => { e.target.style.display = 'none' }}
+                  loading="lazy"
+                />
                 <span className="project-thumb-icon">{p.title[0]}</span>
                 <span className="project-view">View Live →</span>
               </div>
