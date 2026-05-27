@@ -71,37 +71,63 @@
 
 .edu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
   gap: 16px;
   margin-top: 24px;
 }
 
 .edu-card {
-  padding: 24px;
+  padding: 28px;
   display: flex;
-  gap: 16px;
+  gap: 20px;
   align-items: flex-start;
+  border-left: 4px solid var(--accent);
 }
 
 .edu-icon {
-  font-size: 1.5rem;
-  width: 48px;
-  height: 48px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  width: 52px;
+  height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(108,92,231,0.1), rgba(162,155,254,0.1));
-  border-radius: 12px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-light));
+  border-radius: 14px;
   flex-shrink: 0;
+  color: #fff;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 12px rgba(108,92,231,0.25);
+}
+
+.edu-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .edu-card h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  margin-bottom: 4px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1.4;
 }
 
-.edu-card p {
-  font-size: 0.88rem;
+.edu-school {
+  font-size: 0.95rem;
   color: var(--secondary);
+  font-weight: 500;
+}
+
+.edu-year {
+  font-size: 0.82rem;
+  color: var(--accent);
+  font-weight: 600;
+  background: rgba(108,92,231,0.08);
+  padding: 3px 12px;
+  border-radius: 20px;
+  display: inline-block;
+  width: fit-content;
+  margin-top: 4px;
+  border: 1px solid rgba(108,92,231,0.12);
 }

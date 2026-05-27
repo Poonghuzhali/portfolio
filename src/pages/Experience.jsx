@@ -54,12 +54,15 @@ export default function Experience() {
         </div>
 
         <h3 className="section-title" style={{ marginTop: 56, fontSize: '1.5rem' }}>Education</h3>
-        <div className="edu-grid">
+        <div className="edu-grid" ref={ref}>
           {education.map((item, i) => (
-            <div key={i} className="edu-card card">
+            <div key={i} className={`edu-card card reveal ${visible ? 'visible' : ''}`} style={{ transitionDelay: '0.2s' }}>
               <div className="edu-icon">BE</div>
-              <h4>{item.degree}</h4>
-              <p>{item.school} — {item.year}</p>
+              <div className="edu-info">
+                <h4>{item.degree}</h4>
+                <p className="edu-school">{item.school}</p>
+                <span className="edu-year">{item.year}</span>
+              </div>
             </div>
           ))}
         </div>
