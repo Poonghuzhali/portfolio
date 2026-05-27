@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Home.css'
 
 export default function Home() {
@@ -13,8 +14,8 @@ export default function Home() {
           I turn ideas into polished digital products.
         </p>
         <div className="hero-actions">
-          <a href="/portfolio/projects" className="btn btn-primary">View Projects</a>
-          <a href="/portfolio/contact" className="btn btn-outline">Get in Touch</a>
+          <Link to="/projects" className="btn btn-primary">View Projects</Link>
+          <Link to="/contact" className="btn btn-outline">Get in Touch</Link>
         </div>
         <div className="hero-stats">
           <div className="stat">
