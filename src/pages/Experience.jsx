@@ -22,7 +22,7 @@ const experience = [
 ]
 
 const education = [
-  { degree: 'B.E. Electronics & Communication Engineering', school: 'University', year: '2012' },
+  { degree: 'B.E. Electronics & Communication Engineering', school: 'Anna University, Chennai', year: '2008 — 2012' },
 ]
 
 export default function Experience() {
