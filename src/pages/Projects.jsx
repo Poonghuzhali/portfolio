@@ -35,6 +35,7 @@ const projects = [
     desc: 'A restaurant website showcasing menu, location, and brand identity for a vegan eatery.',
     tags: ['HTML', 'CSS', 'UI Design'],
     link: 'https://poonghuzhali.github.io/veganrestaurant/',
+    img: '/portfolio/images/vegan-restaurant.png',
     color: '#00cec9',
   },
   {
@@ -74,7 +75,7 @@ export default function Projects() {
             >
               <div className="project-thumb" style={{ background: `linear-gradient(135deg, ${p.color}, ${p.color}dd)` }}>
                 <img
-                  src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(p.link)}?w=600`}
+                  src={p.img || `https://s0.wp.com/mshots/v1/${encodeURIComponent(p.link)}?w=600`}
                   alt={p.title}
                   className="project-thumb-img"
                   onError={e => { e.target.style.display = 'none' }}
