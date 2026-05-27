@@ -1,10 +1,10 @@
 import './Skills.css'
 
 const skills = [
-  { category: 'Frontend', items: ['React', 'JavaScript', 'TypeScript', 'HTML/CSS', 'Next.js', 'Tailwind CSS'] },
-  { category: 'Backend', items: ['Node.js', 'Express', 'Python', 'PostgreSQL', 'MongoDB', 'GraphQL'] },
-  { category: 'Tools', items: ['Git', 'Docker', 'VS Code', 'Figma', 'Webpack', 'Vite'] },
-  { category: 'Soft Skills', items: ['Communication', 'Teamwork', 'Problem Solving', 'Time Management', 'Adaptability'] },
+  { category: 'Frontend', items: ['HTML', 'CSS', 'Bootstrap', 'Tailwind CSS', 'JavaScript', 'React JS', 'Figma'] },
+  { category: 'Backend', items: ['Python', 'Django', 'MySQL', 'AWS (EC2)'] },
+  { category: 'Tools & AI', items: ['Git', 'GitHub', 'Copilot', 'Jenkins', 'Claude AI', 'Gemini', 'Deepseek'] },
+  { category: 'Data & Analytics', items: ['Data Analysis', 'Excel', 'SQL', 'Reporting', 'Dashboarding'] },
 ]
 
 export default function Skills() {

@@ -2,28 +2,27 @@ import './Experience.css'
 
 const experience = [
   {
-    role: 'Senior Frontend Developer',
-    company: 'TechCorp Inc.',
-    period: 'Jan 2024 — Present',
-    desc: 'Leading frontend architecture for a SaaS platform serving 50K+ users. Building reusable component libraries and mentoring junior developers.',
+    role: 'Junior Python Developer (Intern)',
+    company: 'Vetri IT Solutions',
+    period: 'Jan 2026 — May 2026',
+    desc: 'Worked on real-world web applications using Python, Django, and frontend technologies. Gained hands-on experience in full-stack development and project delivery.',
   },
   {
-    role: 'Full-Stack Developer',
-    company: 'StartupXYZ',
-    period: 'Mar 2022 — Dec 2023',
-    desc: 'Developed and shipped 5+ major features across the stack. Reduced page load times by 40% through code splitting and lazy loading.',
+    role: 'Senior Executive — Data Analyst',
+    company: 'Flipkart',
+    period: 'Aug 2018 — Apr 2023',
+    desc: 'Led data analysis initiatives, created dashboards and reports, and provided actionable insights to drive business decisions in a fast-paced e-commerce environment.',
   },
   {
-    role: 'Junior Developer',
-    company: 'WebAgency Co.',
-    period: 'Jun 2021 — Feb 2022',
-    desc: 'Built responsive websites and web apps for 10+ clients. Collaborated closely with designers to deliver pixel-perfect implementations.',
+    role: 'Data Analyst',
+    company: 'HCL Technologies',
+    period: 'Feb 2013 — Nov 2014',
+    desc: 'Performed data analysis, reporting, and process optimization for client projects. Developed analytical models to support business operations.',
   },
 ]
 
 const education = [
-  { degree: 'B.S. Computer Science', school: 'University of Technology', year: '2021' },
-  { degree: 'Full-Stack Web Dev Bootcamp', school: 'Online Academy', year: '2020' },
+  { degree: 'B.E. Electronics & Communication Engineering', school: 'University', year: '2012' },
 ]
 
 export default function Experience() {

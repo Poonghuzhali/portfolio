@@ -25,37 +25,30 @@ export default function Contact() {
             <input type="text" placeholder="Subject" required className="form-input" />
             <textarea placeholder="Your Message" rows={5} required className="form-input form-textarea" />
             <button type="submit" className="btn btn-primary">
-              {sent ? '✓ Message Sent!' : 'Send Message'}
+              {sent ? 'Message Sent!' : 'Send Message'}
             </button>
           </form>
 
           <div className="contact-info">
             <div className="contact-item">
-              <span className="contact-icon">✉</span>
-              <div>
-                <h4>Email</h4>
-                <p>hello@yourname.com</p>
-              </div>
-            </div>
-            <div className="contact-item">
-              <span className="contact-icon">🔗</span>
+              <span className="contact-icon">GH</span>
               <div>
                 <h4>GitHub</h4>
-                <p>github.com/yourusername</p>
+                <p>github.com/Poonghuzhali</p>
               </div>
             </div>
             <div className="contact-item">
-              <span className="contact-icon">💼</span>
+              <span className="contact-icon">LI</span>
               <div>
                 <h4>LinkedIn</h4>
-                <p>linkedin.com/in/yourusername</p>
+                <p>linkedin.com/in/poonghuzhali</p>
               </div>
             </div>
             <div className="contact-item">
-              <span className="contact-icon">📍</span>
+              <span className="contact-icon">LO</span>
               <div>
                 <h4>Location</h4>
-                <p>Remote / Worldwide</p>
+                <p>Remote / India</p>
               </div>
             </div>
           </div>

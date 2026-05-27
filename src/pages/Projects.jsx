@@ -2,28 +2,60 @@ import './Projects.css'
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    desc: 'A full-featured online store with cart, checkout, and admin dashboard built with React and Node.js.',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
+    title: 'Billing App',
+    desc: 'A billing application built with JavaScript for retail billing and invoice management.',
+    tags: ['JavaScript', 'Billing', 'UI'],
+    link: 'https://github.com/Poonghuzhali/Billing-App',
     color: '#6c5ce7',
   },
   {
-    title: 'Task Manager App',
-    desc: 'Collaborative project management tool with real-time updates, drag-and-drop, and team workspaces.',
-    tags: ['Next.js', 'Socket.io', 'MongoDB', 'Tailwind'],
+    title: 'Retail Flow Billing',
+    desc: 'Retail flow billing system for streamlined point-of-sale operations.',
+    tags: ['HTML', 'CSS', 'JavaScript'],
+    link: 'https://github.com/Poonghuzhali/retailflowbilling',
     color: '#00b894',
   },
   {
-    title: 'Weather Dashboard',
-    desc: 'Real-time weather visualization app with 7-day forecasts, maps, and location-based alerts.',
-    tags: ['React', 'D3.js', 'OpenWeather API', 'Geolocation'],
+    title: 'Day 30 React',
+    desc: 'A 30-day React practice project exploring components, hooks, and state management.',
+    tags: ['React', 'JavaScript', 'Vite'],
+    link: 'https://github.com/Poonghuzhali/day30react',
     color: '#0984e3',
   },
   {
-    title: 'Social Media Analytics',
-    desc: 'Analytics dashboard for tracking engagement, growth, and content performance across platforms.',
-    tags: ['Vue.js', 'Python', 'Chart.js', 'Firebase'],
+    title: 'Inventory Management',
+    desc: 'Inventory tracking system for managing stock, orders, and product data.',
+    tags: ['JavaScript', 'CRUD', 'Dashboard'],
+    link: 'https://github.com/Poonghuzhali/inventory',
     color: '#e17055',
+  },
+  {
+    title: 'Cosmetics Website',
+    desc: 'A responsive e-commerce style website for a cosmetics brand.',
+    tags: ['HTML', 'CSS', 'Responsive'],
+    link: 'https://github.com/Poonghuzhali/cosmetics_website',
+    color: '#fd79a8',
+  },
+  {
+    title: 'Vegan Restaurant',
+    desc: 'A restaurant website showcasing menu, location, and brand identity for a vegan eatery.',
+    tags: ['HTML', 'CSS', 'UI Design'],
+    link: 'https://github.com/Poonghuzhali/veganrestaurant',
+    color: '#00cec9',
+  },
+  {
+    title: 'SR Tech',
+    desc: 'A technology services landing page with modern design and layout.',
+    tags: ['HTML', 'CSS', 'Landing Page'],
+    link: 'https://github.com/Poonghuzhali/srtech',
+    color: '#636e72',
+  },
+  {
+    title: 'Toys Shop',
+    desc: 'An online toy storefront with product listings and shopping cart interface.',
+    tags: ['HTML', 'CSS', 'E-commerce'],
+    link: 'https://github.com/Poonghuzhali/toysshop',
+    color: '#e84393',
   },
 ]
 
@@ -32,11 +64,11 @@ export default function Projects() {
     <section>
       <div className="container">
         <h2 className="section-title">Projects</h2>
-        <p className="section-subtitle">Some things I've built</p>
+        <p className="section-subtitle">Things I've built — click to view on GitHub</p>
 
         <div className="projects-grid">
           {projects.map(p => (
-            <div key={p.title} className="project-card" style={{ '--accent-color': p.color }}>
+            <a key={p.title} href={p.link} target="_blank" rel="noopener noreferrer" className="project-card" style={{ '--accent-color': p.color }}>
               <div className="project-top" style={{ background: p.color }} />
               <div className="project-body">
                 <h3 className="project-title">{p.title}</h3>
@@ -47,7 +79,7 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>

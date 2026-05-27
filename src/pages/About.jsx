@@ -9,12 +9,12 @@ export default function About() {
 
         <div className="about-grid">
           <div className="about-card">
-            <div className="about-avatar">JD</div>
-            <h3>John Doe</h3>
-            <p className="about-role">Full-Stack Developer</p>
+            <div className="about-avatar">PP</div>
+            <h3>Poonghuzhali Ponniyinselvan</h3>
+            <p className="about-role">Python Full-Stack Developer</p>
             <p className="about-desc">
-              I'm a developer with a passion for creating clean, user-friendly applications.
-              I specialize in React, Node.js, and modern JavaScript ecosystems.
+              Passionate about building web applications with Python, Django, and React.
+              Always eager to learn and take on new challenges.
             </p>
           </div>
 
@@ -22,23 +22,24 @@ export default function About() {
             <div className="detail-item">
               <h4>Background</h4>
               <p>
-                With over 3 years of professional experience, I've worked with startups and agencies
-                to deliver high-quality web applications. I believe in writing clean code that
-                scales and creating experiences that users love.
+                5 months Internship at Vetri IT Solutions as a Junior Python Developer,
+                working on real-world web applications. Previously spent 6+ years in data
+                analytics at HCL and Flipkart, bringing a strong analytical mindset to development.
               </p>
             </div>
             <div className="detail-item">
-              <h4>What I Value</h4>
+              <h4>What I Do</h4>
               <p>
-                Clean architecture, thoughtful design, and maintainable code. I'm a strong advocate
-                for user-centric development and continuous learning.
+                I build full-stack web applications using Python, Django, and React.
+                From crafting responsive frontends with Tailwind CSS to designing robust backends,
+                I enjoy the entire development lifecycle.
               </p>
             </div>
             <div className="detail-item">
               <h4>Outside Code</h4>
               <p>
-                When I'm not coding, you'll find me exploring new technologies, reading, or
-                enjoying a good cup of coffee.
+                When I'm not coding, I explore new AI tools, work on personal projects,
+                and stay up-to-date with the latest in tech.
               </p>
             </div>
           </div>

@@ -11,6 +11,8 @@
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
   transition: transform var(--transition), box-shadow var(--transition);
+  display: block;
+  cursor: pointer;
 }
 
 .project-card:hover {

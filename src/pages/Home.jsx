@@ -7,11 +7,11 @@ export default function Home() {
       <div className="container hero-content">
         <div className="hero-badge">Welcome to my portfolio</div>
         <h1 className="hero-title">
-          Hi, I'm <span className="hero-name">Your Name</span>
+          Hi, I'm <span className="hero-name">Poonghuzhali Ponniyinselvan</span>
         </h1>
         <p className="hero-desc">
-          A passionate developer who loves building beautiful, functional web experiences.
-          I turn ideas into polished digital products.
+          Python Full-Stack Developer with experience in Django, React, and data analytics.
+          I build clean, functional web applications.
         </p>
         <div className="hero-actions">
           <Link to="/projects" className="btn btn-primary">View Projects</Link>
@@ -19,16 +19,16 @@ export default function Home() {
         </div>
         <div className="hero-stats">
           <div className="stat">
-            <span className="stat-number">3+</span>
-            <span className="stat-label">Years Exp.</span>
-          </div>
-          <div className="stat">
-            <span className="stat-number">20+</span>
+            <span className="stat-number">10+</span>
             <span className="stat-label">Projects</span>
           </div>
           <div className="stat">
-            <span className="stat-number">15+</span>
-            <span className="stat-label">Clients</span>
+            <span className="stat-number">6+</span>
+            <span className="stat-label">Years Exp.</span>
+          </div>
+          <div className="stat">
+            <span className="stat-number">Python</span>
+            <span className="stat-label">Core Stack</span>
           </div>
         </div>
       </div>
