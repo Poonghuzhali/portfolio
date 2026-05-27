@@ -6,8 +6,14 @@ export default function Contact() {
 
   const handleSubmit = e => {
     e.preventDefault()
-    setSent(true)
-    setTimeout(() => setSent(false), 4000)
+    fetch('https://formsubmit.co/ajax/poonghuzhali1990@gmail.com', {
+      method: 'POST',
+      body: new FormData(e.target),
+    }).then(() => {
+      setSent(true)
+      e.target.reset()
+      setTimeout(() => setSent(false), 4000)
+    }).catch(() => {})
   }
 
   return (
@@ -18,12 +24,14 @@ export default function Contact() {
 
         <div className="contact-grid">
           <form className="contact-form" onSubmit={handleSubmit}>
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
             <div className="form-row">
-              <input type="text" placeholder="Your Name" required className="form-input" />
-              <input type="email" placeholder="Your Email" required className="form-input" />
+              <input type="text" name="name" placeholder="Your Name" required className="form-input" />
+              <input type="email" name="email" placeholder="Your Email" required className="form-input" />
             </div>
-            <input type="text" placeholder="Subject" required className="form-input" />
-            <textarea placeholder="Your Message" rows={5} required className="form-input form-textarea" />
+            <input type="text" name="_subject" placeholder="Subject" required className="form-input" />
+            <textarea name="message" placeholder="Your Message" rows={5} required className="form-input form-textarea" />
             <button type="submit" className="btn btn-primary">
               {sent ? 'Message Sent!' : 'Send Message'}
             </button>
@@ -42,6 +50,13 @@ export default function Contact() {
               <div>
                 <h4>LinkedIn</h4>
                 <p>linkedin.com/in/poonghuzhali</p>
+              </div>
+            </div>
+            <div className="contact-item">
+              <span className="contact-icon">@</span>
+              <div>
+                <h4>Email</h4>
+                <p>poonghuzhali1990@gmail.com</p>
               </div>
             </div>
             <div className="contact-item">
