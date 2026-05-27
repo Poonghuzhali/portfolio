@@ -9,7 +9,9 @@ export default function About() {
 
         <div className="about-grid">
           <div className="about-card">
-            <div className="about-avatar">PP</div>
+            <div className="about-avatar-wrapper">
+              <img src="/portfolio/images/myphoto.png" alt="Poonghuzhali" className="about-photo" />
+            </div>
             <h3>Poonghuzhali Ponniyinselvan</h3>
             <p className="about-role">Python Full-Stack Developer</p>
             <p className="about-desc">
