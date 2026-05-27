@@ -36,7 +36,6 @@
   border-radius: 50%;
   border: 2px solid var(--accent);
   opacity: 0.3;
-  animation: float 4s ease-in-out infinite;
 }
 
 .about-photo {

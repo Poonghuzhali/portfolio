@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import useOnScreen from '../hooks/useOnScreen'
 import './Projects.css'
 
@@ -53,6 +54,29 @@ const projects = [
   },
 ]
 
+function ProjectThumb({ project }) {
+  const [loaded, setLoaded] = useState(false)
+  const [failed, setFailed] = useState(false)
+
+  return (
+    <div className="project-thumb" style={{ background: `linear-gradient(135deg, ${project.color}, ${project.color}88)` }}>
+      {!failed && (
+        <img
+          src={`https://s0.wp.com/mshots/v1/${encodeURIComponent(project.link)}?w=600`}
+          alt={project.title}
+          className={`project-thumb-img ${loaded ? 'loaded' : ''}`}
+          onLoad={() => setLoaded(true)}
+          onError={() => setFailed(true)}
+          loading="lazy"
+        />
+      )}
+      {(!loaded || failed) && (
+        <span className="project-thumb-icon">{project.title[0]}</span>
+      )}
+    </div>
+  )
+}
+
 export default function Projects() {
   const [ref, visible] = useOnScreen()
 
@@ -72,9 +96,7 @@ export default function Projects() {
               className={`project-card reveal ${visible ? 'visible' : ''}`}
               style={{ transitionDelay: `${i * 0.08}s`, '--accent-color': p.color }}
             >
-              <div className="project-thumb" style={{ background: `linear-gradient(135deg, ${p.color}, ${p.color}88)` }}>
-                <span className="project-thumb-icon">{p.title[0]}</span>
-              </div>
+              <ProjectThumb project={p} />
               <div className="project-body">
                 <h3 className="project-title">{p.title}</h3>
                 <p className="project-desc">{p.desc}</p>
