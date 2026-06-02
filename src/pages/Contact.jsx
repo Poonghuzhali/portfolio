@@ -60,7 +60,7 @@ export default function Contact() {
               </div>
             </div>
             <div className="form-field">
-              <input type="text" name="_subject" placeholder="Subject" value={form.subject} onChange={handleChange} className={`form-input ${errors.subject ? 'input-error' : ''}`} />
+              <input type="text" name="subject" placeholder="Subject" value={form.subject} onChange={handleChange} className={`form-input ${errors.subject ? 'input-error' : ''}`} />
               {errors.subject && <span className="field-error">{errors.subject}</span>}
             </div>
             <div className="form-field">
